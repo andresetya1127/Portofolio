@@ -59,10 +59,9 @@ function confirm() {
   }).then((result) => {
     if (result.isConfirmed) {
       // Ambil elemen audio dan tombol
-      const audioPlayer = document.getElementById("audioPlayer");
-      const playButton = document.getElementById("playButton");
-      audioPlayer.play(); // Memutar lagu
       particles();
+      listSound();
+      playSound("sound/m1.mp3");
     }
   });
 }
@@ -188,4 +187,32 @@ function particles() {
       },
     }
   );
+}
+
+function listSound() {
+  var listAlbum = $("#list-album");
+
+  console.clear();
+  $.getJSON("/js/sound.json", function (data) {
+    $.each(data, function (i) {
+      listAlbum.append(
+        `<li class="list-group-item" style="cursor: pointer;" onclick="playSound('${data[i].url}', this);">
+        ${data[i].name}
+          </li>`
+      );
+    });
+  });
+}
+
+function playSound(album, index = false) {
+  const audioPlayer = $("#audioPlayer");
+  audioPlayer.children().attr("src", album);
+  audioPlayer[0].load();
+  audioPlayer[0].play(); // Memutar lagu
+
+  if (index) {
+    const listAlbum = $("#list-album");
+    listAlbum.find("li").removeClass("active");
+    $(index).addClass("active");
+  }
 }
