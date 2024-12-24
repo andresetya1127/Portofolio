@@ -55,23 +55,5 @@ function confirm() {
     backdrop: true,
     confirmButtonColor: "#107fe0",
     confirmButtonText: "Makasih..",
-  }).then((result) => {
-    if (result.isConfirmed) {
-      const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.onmouseenter = Swal.stopTimer;
-          toast.onmouseleave = Swal.resumeTimer;
-        },
-      });
-      Toast.fire({
-        icon: "success",
-        title: "Ya kak sama-sama.",
-      });
-    }
   });
 }
