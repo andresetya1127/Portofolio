@@ -864,6 +864,7 @@ figure {
   transform: translate3d(0, 15px, 0);
 }
 
+
 @media screen and (max-width: 768px) {
   .work .desc {
     opacity: 1;
@@ -878,6 +879,17 @@ figure {
   .work .desc span {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+}
+
+@media screen and (max-height: 740px) {
+  .fh5co-social-icons {
+    transform: translate(-50%, 60%) !important;
+  }
+
+  .fh5co-social-icons li a {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
