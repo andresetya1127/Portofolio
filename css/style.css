@@ -891,6 +891,16 @@ figure {
     padding-left: 0;
     padding-right: 0;
   }
+
+  #fh5co-header .display-t,
+  .fh5co-cover .display-t {
+    margin-top: 80px;
+  }
+
+  #fh5co-header .display-tc,
+  .fh5co-cover .display-tc {
+    vertical-align: top;
+  }
 }
 
 .work:hover .desc {
