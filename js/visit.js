@@ -191,16 +191,13 @@ function particles() {
 
 function listSound() {
   var listAlbum = $("#list-album");
-
   console.clear();
-  $.getJSON("/js/sound.json", function (data) {
-    $.each(data, function (i) {
-      listAlbum.append(
-        `<li class="list-group-item" style="cursor: pointer;" onclick="playSound('${data[i].url}', this);">
-        ${data[i].name}
-          </li>`
-      );
-    });
+  listSounds.forEach(function (data, i) {
+    listAlbum.append(
+      `<li class="list-group-item" style="cursor: pointer;" onclick="playSound('${data.url}', this);">
+      ${data.name}
+        </li>`
+    );
   });
 }
 
