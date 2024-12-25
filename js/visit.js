@@ -44,7 +44,7 @@ function deny() {
 
 function confirm() {
   Swal.fire({
-    title: "Silahkan Kak.",
+    title: "Silahkan.",
     html: "Sambil dengerin lagu ya...  &#x1F600;",
     imageUrl: "./images/makasih.png",
     imageWidth: 260,
