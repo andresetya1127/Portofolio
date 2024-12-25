@@ -66,6 +66,25 @@
     div:where(.swal2-container).swal2-noanimation {
       background-color: rgba(0, 0, 0, 0.9) !important;
     }
+
+    .profile-thumb {
+      width: 200px;
+      height: 200px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      /* animation: rotateImage 7s linear infinite; */
+      /* Animasi berputar */
+    }
+
+    /* Animasi rotasi */
+    /* @keyframes rotateImage {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    } */
   </style>
 </head>
 
@@ -125,7 +144,7 @@
           <div class="col-md-8 col-md-offset-2 text-center">
             <div class="display-t js-fullheight">
               <div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
-                <div class="profile-thumb" style="background: url(images/mypf.jpg)"></div>
+                <div id="profile-thumb" class="profile-thumb" style="background: url(images/mypf.jpg)"></div>
                 <h1><span>Andrian Setya Lucmana</span></h1>
                 <h3><span>Web Developer</span></h3>
               </div>
@@ -166,6 +185,7 @@
   <script src="js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="js/visit.js"></script>
+  <script src="js/beat.js"></script>
 </body>
 
 </html>
