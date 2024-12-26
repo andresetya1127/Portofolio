@@ -61,7 +61,7 @@ function confirm() {
       // Ambil elemen audio dan tombol
       particles();
       listSound();
-      playSound("sound/m1.mp3");
+      playSound("sound/m2.mp3");
     }
   });
 }
