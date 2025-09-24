@@ -24,7 +24,7 @@ var listSounds = [
     url: "sound/m6.mp3",
   },
    {
-    name: "Bergema Sampai Selamanya - Nadhif Basalamah",
+    name: "Bergema Sampai Selamanya-Nadhif Basalamah",
     url: "sound/m7.mp3",
   },
 ];
