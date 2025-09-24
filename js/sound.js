@@ -19,4 +19,8 @@ var listSounds = [
     name: "Kalam Eineh  ya lel ya leli",
     url: "sound/m5.mp3",
   },
+    {
+    name: "Kembali Pulang - Suara Kayu",
+    url: "sound/m6.mp3",
+  },
 ];
